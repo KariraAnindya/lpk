@@ -54,4 +54,3 @@ def cod_calculator(app_mode):
             st.pyplot(fig)
 
 app_mode = st.sidebar.selectbox("Select an option", ["Calculate COD", "COD Analysis"])
-cod_calculator(app_mode):

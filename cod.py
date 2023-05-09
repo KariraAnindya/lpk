@@ -18,16 +18,16 @@ if navbar == 'Home':
 
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":
-        st.header("Kalkulasi Chemical Oxygen Demand (COD)")
+        st.header("Calculate Chemical Oxygen Demand (COD)")
         st.write("Masukkan nilai untuk menghitung Kadar COD")
 
-        volume blanko = st.number_input("Masukkan volume blanko (mL)")
-        volume pereaksi = st.number_input("Maasukkan volume pereaksi (mL)")
+        volume_blanko = st.number_input("Masukkan volume blanko (mL)")
+        volume_pereaksi = st.number_input("Masukkan volume pereaksi (mL)")
         normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)")
-        berat ekivalen oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)")
-        volume sampel = st.number_input("Masukkan nilai volume sampel")
+        berat_ekivalen_oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)")
+        volume_sampel = st.number_input("Masukkan nilai volume sampel")
 
-        cod = (volume blanko - volume pereaksi) * normalitas * berat ekivalen oksigen / volume sampel
+        cod = (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
 
         st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
 

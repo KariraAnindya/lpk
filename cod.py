@@ -29,7 +29,7 @@ st.write ('''
 
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":
-        st.header("Calculate Chemical Oxygen Demand (COD)")
+        st.header("Perhitungan Kadar COD")
         st.write("Masukkan nilai untuk menghitung Kadar COD")
 
         volume_blanko = st.number_input("Masukkan volume blanko (mL)")

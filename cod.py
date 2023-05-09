@@ -1,6 +1,11 @@
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.set_page_config(page_title='Perhitungan Kadar COD', page_icon=':memo:', layout='wide')
 
 st.title('Perhitungan Kadar COD')
+
 st.write('''
     "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang"''')
 
@@ -33,28 +38,19 @@ def cod_calculator(app_mode):
         berat_ekivalen_oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)")
         volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)")
 
-    if volume_sampel !=0:
-        cod = (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
+        if volume_sampel !=0:
+            cod = (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
+            st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L") # add this line
 
-        st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
+def ph_calculator(app_mode):
+    if app_mode == "Calculate pH":
+        st.header("Calculate pH")
+        st.write("Masukkan nilai untuk menghitung pH")
 
-    else :
-        st.write("Error: volume_sampel should not be 0.")
+        # Add your input fields and calculations for pH here
 
-    elif app_mode == "Analysis COD":
-        st.header("Analysis COD")
-        st.write("Upload your COD analysis data in CSV format below")
-
-        uploaded_file = st.file_uploader("Choose a file")
-
-        if uploaded_file is not None:
-            df = pd.read_csv(uploaded_file)
-            fig, ax = plt.subplots()
-            ax.plot(df["Sample"], df["COD"], marker="o")
-            ax.set_xlabel("Sample")
-            ax.set_ylabel("COD (mg/L)")
-            ax.set_title("COD Analysis")
-            st.pyplot(fig)
-
-app_mode = st.sidebar.selectbox("Select an option", ["Calculate COD", "COD Analysis"])
-cod_calculator(app_mode) 
+app_mode = st.sidebar.selectbox("Pilih mode", ["Calculate COD", "Calculate pH"])
+if app_mode == "Calculate COD":
+    cod_calculator(app_mode)
+elif app_mode == "Calculate pH":
+    ph_calculator(app_mode)

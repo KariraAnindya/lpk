@@ -12,10 +12,6 @@ st.header('Pengertian COD')
 st.write('''
     Chemical Oxygen Demand (COD) adalah metode analisis kimia yang digunakan untuk mengukur jumlah bahan organik yang teroksidasi dalam sampel air atau limbah cair. Metode ini digunakan sebagai indikator kualitas air untuk menentukan sejauh mana air tersebut tercemar oleh bahan-bahan organik terlarut.
 
-Pada metode COD, bahan organik dalam sampel dioksidasi dengan menggunakan larutan oksidator kuat seperti kalium dikromat (K2Cr2O7) dalam kondisi asam. Proses oksidasi ini akan menghasilkan senyawa-senyawa seperti karbon dioksida, air, dan senyawa-senyawa anorganik lainnya.
-
-Kemudian, jumlah oksigen yang dibutuhkan untuk proses oksidasi ini diukur dan dinyatakan dalam satuan ppm (part per million) atau mg/L (miligram per liter). Semakin tinggi nilai COD dalam sampel, semakin banyak bahan organik teroksidasi, yang menunjukkan bahwa kualitas air semakin buruk atau tercemar.
-
 Metode COD sering digunakan dalam pengujian kualitas air limbah, industri, dan lingkungan. Nilai COD dapat digunakan sebagai indikator awal untuk menentukan proses pengolahan air yang dibutuhkan sebelum dibuang ke lingkungan atau digunakan kembali.
 ''')
 

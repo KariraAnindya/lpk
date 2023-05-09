@@ -1,11 +1,12 @@
 import streamlit as st
 
+st.title('Project Kelompok 5')
 st.set_page_config(layout='wide')
 st.write('''
     "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa"''')
 
-navbar = option_menu(menu_title=None, options=['Home'], icons=['0'])
-if navbar == 'Home':
+def navbar = option_menu(menu_title=None, options=['Home'], icons=['0'])
+    if navbar == 'Home':
     st.title('Perhitungan Kadar COD')
     st.subheader('Kelompok 5')
     st.write ('''

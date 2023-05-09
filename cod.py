@@ -36,17 +36,19 @@ def cod_calculator(app_mode):
 
         if volume_sampel !=0:
             cod = (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
-            st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L") # add this line
+            st.write(f"Nilai COD adalah {cod:.2f} mg/L") # add this line
 
-def ph_calculator(app_mode):
-    if app_mode == "Calculate pH":
-        st.header("Calculate pH")
-        st.write("Masukkan nilai untuk menghitung pH")
+def cod_calculator(app_mode):
+    if app_mode == "Calculate cod":
+        st.header("Calculate cod")
+        st.write("Masukkan nilai untuk menghitung COD")
 
-        # Add your input fields and calculations for pH here
+        # Add your input fields and calculations for cod here
 
-app_mode = st.sidebar.selectbox("Pilih mode", ["Calculate COD", "Calculate pH"])
+app_mode = st.sidebar.selectbox("Pilih mode", ["Calculate COD", "Calculate cod"])
 if app_mode == "Calculate COD":
     cod_calculator(app_mode)
-elif app_mode == "Calculate pH":
-    ph_calculator(app_mode)
+elif app_mode == "Calculate COD":
+    cod_calculator(app_mode)
+
+    

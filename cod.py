@@ -38,9 +38,10 @@ def cod_calculator(app_mode):
 
         st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
 
-    else :
+    elif :
         st.write("Error: volume_sampel should not be 0.")
-    elif app_mode == "Analysis COD":
+
+    else app_mode == "Analysis COD":
         st.header("Analysis COD")
         st.write("Upload your COD analysis data in CSV format below")
 

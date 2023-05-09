@@ -8,6 +8,7 @@ st.title('Perhitungan Kadar COD')
 st.write('''
     Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang''')
 
+st.header('Pengertian COD')
 st.write('''
     Chemical Oxygen Demand (COD) adalah metode analisis kimia yang digunakan untuk mengukur jumlah bahan organik yang teroksidasi dalam sampel air atau limbah cair. Metode ini digunakan sebagai indikator kualitas air untuk menentukan sejauh mana air tersebut tercemar oleh bahan-bahan organik terlarut.
 
@@ -28,7 +29,7 @@ st.write ('''
 
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":
-        st.header("Calculate Chemical Oxygen Demand (COD)")
+        st.header("Perhitungan Kadar COD")
         st.write("Masukkan nilai untuk menghitung Kadar COD")
 
         volume_blanko = st.number_input("Masukkan volume blanko (mL)")

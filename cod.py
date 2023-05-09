@@ -1,5 +1,5 @@
 import streamlit as st
-from sttreamlit_option_menu import option_menu
+from streamlit_option_menu import option_menu
 
 st.set_page_config(layout='wide')
 st.write('''

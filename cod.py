@@ -33,7 +33,7 @@ def cod_calculator(app_mode):
         berat_ekivalen_oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)")
         volume_sampel = st.number_input("Masukkan nilai volume sampel (mL)")
 
-        return cod_calculate = (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
+        return (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
 
         st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
 

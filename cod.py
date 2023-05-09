@@ -15,7 +15,7 @@ Kemudian, jumlah oksigen yang dibutuhkan untuk proses oksidasi ini diukur dan di
 Metode COD sering digunakan dalam pengujian kualitas air limbah, industri, dan lingkungan. Nilai COD dapat digunakan sebagai indikator awal untuk menentukan proses pengolahan air yang dibutuhkan sebelum dibuang ke lingkungan atau digunakan kembali.
 "''')
 
-    st.title('Perhitungan Kadar COD')
+    st.subheader('Perhitungan Kadar COD')
     st.write ('''
         Agnia Zahara (2230424) \n
         Arya Dhemas Pambudhi (2230435) \n

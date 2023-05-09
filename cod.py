@@ -1,7 +1,6 @@
 import streamlit as st
 
 st.title('Perhitungan Kadar COD')
-st.set_page_config(layout='wide')
 st.write('''
     "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang"''')
 

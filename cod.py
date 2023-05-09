@@ -1,32 +1,38 @@
 import streamlit as st
 from sttreamlit_option_menu import option_menu
 
-if navbar == 'Home' :
-    st._title('Menghitung Kadar COD')
+st.set_page_config(layout='wide')
+st.write('''
+    "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa"''')
+
+navbar = option_menu(menu_title=None, options=['Home'], icons=['0'])
+if navbar == 'Home':
+    st.title('Perhitungan Kadar COD')
     st.subheader('Kelompok 5')
-    st.write('''
-    Agina Zahara \n
-    Arya Dhemas Pambudhi \n
-    Ghaniyyuh Halmar Indrahani \n
-    Karira Anindya \n
-    Sekar Laras''')
+    st.write ('''
+        Agnia Zahara (2230424) \n
+        Arya Dhemas Pambudhi (2230435) \n
+        Ghaniyyu Halmar Indrahani (2230442) \n
+        Karira Anindya (2230447) \n
+        Sekar Laras (2230470) \n''')
 
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":
-        st.header("Calculate Chemical Oxygen Demand (COD)")
-        st.write("Enter the values below to calculate the Chemical Oxygen Demand (COD)")
+        st.header("Kalkulasi Chemical Oxygen Demand (COD)")
+        st.write("Masukkan nilai untuk menghitung Kadar COD")
 
-        volume = st.number_input("Enter the volume of the sample (in mL)", min_value=0.1, step=1.0)
-        acid = st.number_input("Enter the volume of the acid used (in mL)", min_value=0.1, step=1.0)
-        blank = st.number_input("Enter the volume of the blank (in mL)", min_value=0.1, step=1.0)
-        factor = st.number_input("Enter the factor used for the calculation", min_value=0.1, step=0.01)
+        volume blanko = st.number_input("Masukkan volume blanko (mL)", min_value=0.1, step=1.0)
+        volume pereaksi = st.number_input("Maasukkan volume pereaksi (mL)", min_value=0.1, step=1.0)
+        normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", min_value=0.1, step=1.0)
+        berat ekivalen oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)" , min_value=0.1, step=0.01)
+        volume sampel = st.number_input("Masukkan nilai volume sampel", min_value=0.1, step=0.01)
 
-        cod = (factor * (acid - blank)) / volume
+        cod = (volume blanko - volume pereaksi) * normalitas * berat ekivalen oksigen / volume sampel
 
         st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
 
-    elif app_mode == "COD Analysis":
-        st.header("COD Analysis")
+    elif app_mode == "Analysis COD":
+        st.header("Analysis COD")
         st.write("Upload your COD analysis data in CSV format below")
 
         uploaded_file = st.file_uploader("Choose a file")

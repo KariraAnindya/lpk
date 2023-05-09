@@ -21,11 +21,11 @@ def cod_calculator(app_mode):
         st.header("Kalkulasi Chemical Oxygen Demand (COD)")
         st.write("Masukkan nilai untuk menghitung Kadar COD")
 
-        volume blanko = st.number_input("Masukkan volume blanko (mL)", min_value=0.1, step=1.0)
-        volume pereaksi = st.number_input("Maasukkan volume pereaksi (mL)", min_value=0.1, step=1.0)
-        normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)", min_value=0.1, step=1.0)
-        berat ekivalen oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)" , min_value=0.1, step=0.01)
-        volume sampel = st.number_input("Masukkan nilai volume sampel", min_value=0.1, step=0.01)
+        volume blanko = st.number_input("Masukkan volume blanko (mL)")
+        volume pereaksi = st.number_input("Maasukkan volume pereaksi (mL)")
+        normalitas = st.number_input("Masukkan nilai normalitas (grek/mL)")
+        berat ekivalen oksigen = st.number_input("Masukkan berat ekivalen oksigen (mL) (Tetapan dalam SNI 8*1000)")
+        volume sampel = st.number_input("Masukkan nilai volume sampel")
 
         cod = (volume blanko - volume pereaksi) * normalitas * berat ekivalen oksigen / volume sampel
 

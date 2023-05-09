@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('Project Kelompok 5')
+st.title('Perhitungan Kadar COD')
 st.set_page_config(layout='wide')
 st.write('''
     "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang"''')
@@ -15,13 +15,13 @@ Kemudian, jumlah oksigen yang dibutuhkan untuk proses oksidasi ini diukur dan di
 Metode COD sering digunakan dalam pengujian kualitas air limbah, industri, dan lingkungan. Nilai COD dapat digunakan sebagai indikator awal untuk menentukan proses pengolahan air yang dibutuhkan sebelum dibuang ke lingkungan atau digunakan kembali.
 "''')
 
-    st.subheader('Perhitungan Kadar COD')
-    st.write ('''
-        Agnia Zahara (2230424) \n
-        Arya Dhemas Pambudhi (2230435) \n
-        Ghaniyyu Halmar Indrahani (2230442) \n
-        Karira Anindya (2230447) \n
-        Sekar Laras (2230470) \n''')
+st.subheader('Kelompok 5')
+st.write ('''
+    Agnia Zahara (2230424) \n
+    Arya Dhemas Pambudhi (2230435) \n
+    Ghaniyyu Halmar Indrahani (2230442) \n
+    Karira Anindya (2230447) \n
+    Sekar Laras (2230470) \n''')
 
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":

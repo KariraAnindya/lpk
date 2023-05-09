@@ -5,7 +5,8 @@ st.set_page_config(layout='wide')
 st.write('''
     "Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa"''')
 
-def navbar = option_menu(menu_title=None, options=['Home'], icons=['0'])
+
+navbar = option_menu(menu_title=None, options=['Home'], icons=['0'])
     if navbar == 'Home':
     st.title('Perhitungan Kadar COD')
     st.subheader('Kelompok 5')

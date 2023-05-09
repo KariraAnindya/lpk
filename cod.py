@@ -1,7 +1,7 @@
 import streamlit as st
 from sttreamlit_option_menu import option_menu
 
-if navbar == 'Home'
+if navbar == 'Home' :
     st._title('Menghitung Kadar COD')
     st.subheader('Kelompok 5')
     st.write('''
@@ -10,7 +10,7 @@ if navbar == 'Home'
     Ghaniyyuh Halmar Indrahani \n
     Karira Anindya \n
     Sekar Laras''')
-    
+
 def cod_calculator(app_mode):
     if app_mode == "Calculate COD":
         st.header("Calculate Chemical Oxygen Demand (COD)")

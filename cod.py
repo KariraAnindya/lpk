@@ -35,6 +35,7 @@ def cod_calculator(app_mode):
 
         return (volume_blanko - volume_pereaksi) * normalitas * berat_ekivalen_oksigen / volume_sampel
 
+
         st.write(f"The Chemical Oxygen Demand (COD) is {cod:.2f} mg/L")
 
     elif app_mode == "Analysis COD":

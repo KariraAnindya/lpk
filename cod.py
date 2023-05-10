@@ -1,12 +1,15 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title='Perhitungan Kadar COD', page_icon=':memo:', layout='wide')
 
-st.title('Perhitungan Kadar COD')
+from streamlit_option_menu import option_menu
 
-st.write('''
-    Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang''')
+navbar= option_menu(menu_title=None, options= ['Home','Calculate COD'],default_index=0,icons=['house-door'])
+
+if navbar=='Home':
+    st.title('Perhitungan Kadar COD')
+    st.write('''
+        Hallo! Website ini dibuat untuk memudahkan kamu dalam menghitung kadar COD sebelum melakukan analisa. Website ini sangat membantu dalam pengolahan data jika menjadi sebuah alat yang sangat berkembang pesat. Perkembangan ini membawa dampak positif bagi kampus yang berkembang''')
 
 st.header('Pengertian COD')
 st.write('''
